@@ -42,7 +42,7 @@ def lifecycle(mocker: MockerFixture):
 
 
 @pytest.fixture
-def client(api_key: str) -> str:
+def client(api_key: str) -> TransactionsClient:
     return TransactionsClient(api_key, fairfax=True)
 
 

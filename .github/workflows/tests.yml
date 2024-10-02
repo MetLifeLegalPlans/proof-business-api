@@ -1,0 +1,29 @@
+name: Lint and Test
+
+'on':
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    strategy:
+      matrix:
+        cmd:
+          - pytest
+          - pyre check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: 'x64'
+      - name: Install dependencies
+        run:
+          pip install --upgrade pip poetry
+          poetry install
+      - name: ${{ matrix.cmd }}
+        env:
+          PROOF_API_KEY: ${{ secrets.PROOF_TESTING_API_KEY }}
+        run: poetry run ${{ matrix.cmd }}
