@@ -1,20 +1,15 @@
 from typing import Dict, Any
-import os
 
 import pytest
 from pytest_mock import MockerFixture, MockType
 
 import requests
 
+from proof_business_api import ProofClient
 from proof_business_api.transactions import TransactionsClient
 
 _api_key_var = "PROOF_API_KEY"
-pytestmark = [
-    pytest.mark.vcr,
-    pytest.mark.skipif(
-        not os.environ.get(_api_key_var, default=None), reason="No test API key provided"
-    ),
-]
+pytestmark = [pytest.mark.vcr]
 
 _used_methods = ["get", "post", "put", "patch", "delete"]
 _spies: Dict[str, MockType] = {}
@@ -46,7 +41,7 @@ def lifecycle(mocker: MockerFixture):
 
 @pytest.fixture
 def client(api_key: str) -> TransactionsClient:
-    return TransactionsClient(api_key, fairfax=True)
+    return ProofClient(api_key, fairfax=True).transactions
 
 
 def test_list(client: TransactionsClient):

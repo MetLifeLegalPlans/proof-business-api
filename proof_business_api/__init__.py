@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
-from .transactions import TransactionsClient
+from .resource import ProofClient
 
 load_dotenv()
 
-__all__ = [TransactionsClient]
+__all__ = ["ProofClient"]

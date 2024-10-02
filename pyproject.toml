@@ -20,6 +20,10 @@ pyre-check = "^0.9.22"
 pytest-mock = "^3.14.0"
 python-dotenv = "^1.0.1"
 pytest-recording = "^0.13.2"
+bpython = {version = "^0.24", optional = true}
+
+[tool.poetry.extras]
+debug = ['bpython']
 
 [tool.poetry.scripts]
 watch = "proof_business_api.watch:main"

@@ -2,6 +2,7 @@ import pytest
 from faker import Faker
 from proof_business_api.client import Client
 from proof_business_api.transactions import TransactionsClient
+from proof_business_api.resource import ProofClient
 
 import requests
 
@@ -48,3 +49,8 @@ def test_client_joins_resources_properly(api_key, mocker) -> None:
 
     client.all()
     requests.get.assert_called_once_with(client.base_url, headers=client.headers, params={})
+
+
+def test_resource_client_initializes_subresources(api_key) -> None:
+    client = ProofClient(api_key)
+    assert client.transactions.api_key == api_key
