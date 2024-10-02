@@ -46,11 +46,7 @@ class TransactionsClient(Client):
     def eligible_notaries_for(self, id: str) -> JsonObj:
         return self._get(urljoin(f"{id}/", "notaries"))
 
-    def add_document_to(
-        self,
-        id: str,
-        **payload,
-    ) -> JsonObj:
+    def add_document_to(self, id: str, **payload) -> JsonObj:
         return self._post(
             urljoin(f"{id}/", "documents"),
             params=self.url_version_params,

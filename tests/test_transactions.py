@@ -40,12 +40,17 @@ def lifecycle(mocker: MockerFixture):
 
 
 @pytest.fixture
-def client(api_key: str) -> TransactionsClient:
-    return ProofClient(api_key, fairfax=True).transactions
+def client(api_key: str) -> ProofClient:
+    return ProofClient(api_key, fairfax=True)
 
 
-def test_list(client: TransactionsClient):
-    response = client.all()
+def _reset_spies() -> None:
+    for spy in _spies.values():
+        spy.reset_mock()
+
+
+def test_list(client: ProofClient):
+    response = client.transactions.all()
 
     get_spy = _spies["get"]
     get_spy.assert_called_once()
@@ -53,15 +58,36 @@ def test_list(client: TransactionsClient):
     assert all([key in response for key in ["total_count", "count", "data"]])
 
 
-def test_lifecycle(client: TransactionsClient):
-    response = client.create(**_create_params)
+def test_lifecycle(client: ProofClient):
+    # Create a new transaction
+    response = client.transactions.create(**_create_params)
     post_spy = _spies["post"]
     post_spy.assert_called_once()
 
-    response = client.retrieve(response["id"])
+    # Fetch it back to confirm it was received
+    response = client.transactions.retrieve(response["id"])
     get_spy = _spies["get"]
     get_spy.assert_called_once()
+    _reset_spies()
 
-    response = client.delete(response["id"])
+    transaction_id = response["id"]
+    document_id = response["documents"][0]["id"]
+
+    # Fetch its document object - this can take some time to finish processing
+    for _ in range(3):
+        try:
+            response = client.transactions.get_document_from(
+                transaction_id,
+                document_id,
+            )
+            get_spy.assert_called_once()
+            break
+        except requests.HTTPError:
+            _reset_spies()
+    else:
+        raise AssertionError("Unable to fetch document")
+
+    # Delete the transaction to clean up after ourselves
+    response = client.transactions.delete(transaction_id)
     delete_spy = _spies["delete"]
     delete_spy.assert_called_once()
