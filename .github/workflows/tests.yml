@@ -20,7 +20,7 @@ jobs:
           python-version: '3.12'
           architecture: 'x64'
       - name: Install dependencies
-        run:
+        run: |
           pip install --upgrade pip poetry
           poetry install
       - name: ${{ matrix.cmd }}
