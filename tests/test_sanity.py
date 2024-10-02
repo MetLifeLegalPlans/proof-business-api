@@ -54,3 +54,4 @@ def test_client_joins_resources_properly(api_key, mocker) -> None:
 def test_resource_client_initializes_subresources(api_key) -> None:
     client = ProofClient(api_key)
     assert client.transactions.api_key == api_key
+    assert client.documents.api_key == api_key
