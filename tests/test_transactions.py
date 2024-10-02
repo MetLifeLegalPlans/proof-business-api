@@ -6,7 +6,6 @@ from pytest_mock import MockerFixture, MockType
 import requests
 
 from proof_business_api import ProofClient
-from proof_business_api.transactions import TransactionsClient
 
 _api_key_var = "PROOF_API_KEY"
 pytestmark = [pytest.mark.vcr]
