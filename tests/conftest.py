@@ -1,9 +1,13 @@
-import logging
 import os
-from typing import Optional
+from typing import Optional, Dict, Any
 
 import pytest
 import requests
+
+
+@pytest.fixture(scope="module")
+def vcr_config() -> Dict[str, Any]:
+    return {"filter_headers": ["ApiKey"]}
 
 
 @pytest.fixture

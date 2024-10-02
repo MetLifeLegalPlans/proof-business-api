@@ -9,9 +9,12 @@ import requests
 from proof_business_api.transactions import TransactionsClient
 
 _api_key_var = "PROOF_API_KEY"
-pytestmark = pytest.mark.skipif(
-    not os.environ.get(_api_key_var, default=None), reason="No test API key provided"
-)
+pytestmark = [
+    pytest.mark.vcr,
+    pytest.mark.skipif(
+        not os.environ.get(_api_key_var, default=None), reason="No test API key provided"
+    ),
+]
 
 _used_methods = ["get", "post", "put", "patch", "delete"]
 _spies: Dict[str, MockType] = {}

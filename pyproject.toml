@@ -6,7 +6,7 @@ authors = ["Aria Taylor <ari@willing.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 requests = "^2.32.3"
 importlib-resources = "^6.4.5"
 
@@ -19,6 +19,7 @@ faker = "^30.0.0"
 pyre-check = "^0.9.22"
 pytest-mock = "^3.14.0"
 python-dotenv = "^1.0.1"
+pytest-recording = "^0.13.2"
 
 [tool.poetry.scripts]
 watch = "proof_business_api.watch:main"
