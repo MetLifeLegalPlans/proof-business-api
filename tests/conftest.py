@@ -2,12 +2,37 @@ import os
 from typing import Optional, Dict, Any
 
 import pytest
+from pytest_mock import MockerFixture, MockType
 import requests
+
+
+_used_methods = ["get", "post", "put", "patch", "delete"]
+_spies: Dict[str, MockType] = {}
+
+
+def _resetspies() -> None:
+    for spy in _spies.values():
+        spy.reset_mock()
+
+
+@pytest.fixture(autouse=True)
+def lifecycle(mocker: MockerFixture):
+    for method in _used_methods:
+        _spies[method] = mocker.spy(requests, method)
+
+    yield
+
+    _resetspies()
 
 
 @pytest.fixture(scope="module")
 def vcr_config() -> Dict[str, Any]:
     return {"filter_headers": ["ApiKey"]}
+
+
+@pytest.fixture
+def spies() -> Dict[str, MockType]:
+    return _spies
 
 
 @pytest.fixture

@@ -19,8 +19,8 @@ interactions:
     uri: https://api.fairfax.proof.com/v1/transactions/?document_url_version=v1
   response:
     body:
-      string: '{"id":"ot_ngzeo44","attachments":[],"cost":0,"date_created":"2024-10-02T20:47:20.745807Z","date_updated":"2024-10-02T20:47:21.249176Z","default_text_tag_syntax":"STANDARD","detailed_status":"sent_to_signer","documents":[{"id":"do_f0c41501-4c13-4ac0-b72e-0268b50306fb","allowed_actions":["CUSTOMER_CAN_ANNOTATE","NOTARIZATION_REQUIRED"],"bundle_position":0,"completion_state":"incomplete","date_created":"2024-10-02T20:47:20.958128Z","date_updated":"2024-10-02T20:47:20.996783Z","document_name":"20241002-30829-tx9gj.pdf","esign_required":false,"identity_confirmation_required":false,"notarization_required":true,"processing_state":"pending","requirement":"notarization","signing_designation_groups":[],"signing_designations":[],"vaulted":false}],"notarization_records":[],"organization_id":"or_d3gg34g","payer":"sender","redirect":{},"require_secondary_photo_id":false,"sender_name":"MetLife
-        Legal Plans","signer_info":{"email":"test@willing.com","first_name":"CI","last_name":"Test","transaction_access_link":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbe8b2e30d-d9c5-4094-8dfd-a7d2791cfb38\u0026code=EVVNJLHGVCPCHJDH\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=EVVNJLHGVCPCHJDH\u0026target=BUNDLE\u0026transaction_id=otngzeo44\u0026user_id=usnm9kjp6","sdk_token":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbe8b2e30d-d9c5-4094-8dfd-a7d2791cfb38\u0026code=EVVNJLHGVCPCHJDH\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=EVVNJLHGVCPCHJDH\u0026target=BUNDLE\u0026transaction_id=otngzeo44\u0026user_id=usnm9kjp6","link_expired":false,"address":{"line1":"","line2":"","city":"","state":"","postal":"","country":""},"vesting_type":"non_borrower","signatory_capacities":[],"signing_status":"incomplete"},"signers":[{"email":"test@willing.com","first_name":"CI","last_name":"Test","transaction_access_link":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbe8b2e30d-d9c5-4094-8dfd-a7d2791cfb38\u0026code=EVVNJLHGVCPCHJDH\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=EVVNJLHGVCPCHJDH\u0026target=BUNDLE\u0026transaction_id=otngzeo44\u0026user_id=usnm9kjp6","sdk_token":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbe8b2e30d-d9c5-4094-8dfd-a7d2791cfb38\u0026code=EVVNJLHGVCPCHJDH\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=EVVNJLHGVCPCHJDH\u0026target=BUNDLE\u0026transaction_id=otngzeo44\u0026user_id=usnm9kjp6","link_expired":false,"address":{"line1":"","line2":"","city":"","state":"","postal":"","country":""},"vesting_type":"non_borrower","signatory_capacities":[],"signing_status":"incomplete"}],"status":"sent","transaction_name":"Untitled
+      string: '{"id":"ot_ngzexek","attachments":[],"cost":0,"date_created":"2024-10-04T22:27:21.152068Z","date_updated":"2024-10-04T22:27:21.497052Z","default_text_tag_syntax":"STANDARD","detailed_status":"sent_to_signer","documents":[{"id":"do_250ae0e7-effd-43b7-8950-f780170ba1d3","allowed_actions":["CUSTOMER_CAN_ANNOTATE","NOTARIZATION_REQUIRED"],"bundle_position":0,"completion_state":"incomplete","date_created":"2024-10-04T22:27:21.332760Z","date_updated":"2024-10-04T22:27:21.355689Z","document_name":"20241004-6289-c0lk1.pdf","esign_required":false,"identity_confirmation_required":false,"notarization_required":true,"processing_state":"pending","requirement":"notarization","signing_designation_groups":[],"signing_designations":[],"vaulted":false}],"notarization_records":[],"organization_id":"or_d3gg34g","payer":"sender","redirect":{},"require_secondary_photo_id":false,"sender_name":"MetLife
+        Legal Plans","signer_info":{"email":"test@willing.com","first_name":"CI","last_name":"Test","transaction_access_link":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbef52f65a-a21a-4ae0-b670-d78a37d8323d\u0026code=GVDPKTKDHMWDYLWI\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=GVDPKTKDHMWDYLWI\u0026target=BUNDLE\u0026transaction_id=otngzexek\u0026user_id=usnm9kjp6","sdk_token":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbef52f65a-a21a-4ae0-b670-d78a37d8323d\u0026code=GVDPKTKDHMWDYLWI\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=GVDPKTKDHMWDYLWI\u0026target=BUNDLE\u0026transaction_id=otngzexek\u0026user_id=usnm9kjp6","link_expired":false,"address":{"line1":"","line2":"","city":"","state":"","postal":"","country":""},"vesting_type":"non_borrower","signatory_capacities":[],"signing_status":"incomplete"},"signers":[{"email":"test@willing.com","first_name":"CI","last_name":"Test","transaction_access_link":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbef52f65a-a21a-4ae0-b670-d78a37d8323d\u0026code=GVDPKTKDHMWDYLWI\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=GVDPKTKDHMWDYLWI\u0026target=BUNDLE\u0026transaction_id=otngzexek\u0026user_id=usnm9kjp6","sdk_token":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbef52f65a-a21a-4ae0-b670-d78a37d8323d\u0026code=GVDPKTKDHMWDYLWI\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=GVDPKTKDHMWDYLWI\u0026target=BUNDLE\u0026transaction_id=otngzexek\u0026user_id=usnm9kjp6","link_expired":false,"address":{"line1":"","line2":"","city":"","state":"","postal":"","country":""},"vesting_type":"non_borrower","signatory_capacities":[],"signing_status":"incomplete"}],"status":"sent","transaction_name":"Untitled
         Transaction"}'
     headers:
       Connection:
@@ -28,7 +28,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 02 Oct 2024 20:47:21 GMT
+      - Fri, 04 Oct 2024 22:27:21 GMT
       Transfer-Encoding:
       - chunked
       cache-control:
@@ -44,7 +44,7 @@ interactions:
       vary:
       - Accept, Accept-Encoding, Origin
       x-amz-trace-id:
-      - 1a00da27-1fbe-4595-a6d9-7c67b5fd82f4
+      - 6f7cdb68-a4e9-4951-b4c3-151f086b3c47
       x-content-type-options:
       - nosniff
       x-frame-options:
@@ -52,7 +52,7 @@ interactions:
       x-permitted-cross-domain-policies:
       - none
       x-runtime:
-      - '0.683030'
+      - '0.455469'
       x-xss-protection:
       - '0'
     status:
@@ -72,11 +72,11 @@ interactions:
       User-Agent:
       - python-requests/2.32.3
     method: GET
-    uri: https://api.fairfax.proof.com/v1/transactions/ot_ngzeo44
+    uri: https://api.fairfax.proof.com/v1/transactions/ot_ngzexek
   response:
     body:
-      string: '{"id":"ot_ngzeo44","attachments":[],"cost":0,"date_created":"2024-10-02T20:47:20.745807Z","date_updated":"2024-10-02T20:47:21.249176Z","default_text_tag_syntax":"STANDARD","detailed_status":"sent_to_signer","documents":[{"id":"do_f0c41501-4c13-4ac0-b72e-0268b50306fb","allowed_actions":["CUSTOMER_CAN_ANNOTATE","NOTARIZATION_REQUIRED"],"bundle_position":0,"completion_state":"incomplete","date_created":"2024-10-02T20:47:20.958128Z","date_updated":"2024-10-02T20:47:21.470888Z","document_name":"20241002-30829-tx9gj.pdf","esign_required":false,"identity_confirmation_required":false,"notarization_required":true,"processing_state":"pending","requirement":"notarization","signing_designation_groups":[],"signing_designations":[],"vaulted":false}],"notarization_records":[],"organization_id":"or_d3gg34g","payer":"sender","redirect":{},"require_secondary_photo_id":false,"sender_name":"MetLife
-        Legal Plans","signer_info":{"email":"test@willing.com","first_name":"CI","last_name":"Test","transaction_access_link":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbe8b2e30d-d9c5-4094-8dfd-a7d2791cfb38\u0026code=EVVNJLHGVCPCHJDH\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=EVVNJLHGVCPCHJDH\u0026target=BUNDLE\u0026transaction_id=otngzeo44\u0026user_id=usnm9kjp6","sdk_token":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbe8b2e30d-d9c5-4094-8dfd-a7d2791cfb38\u0026code=EVVNJLHGVCPCHJDH\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=EVVNJLHGVCPCHJDH\u0026target=BUNDLE\u0026transaction_id=otngzeo44\u0026user_id=usnm9kjp6","link_expired":false,"address":{"line1":"","line2":"","city":"","state":"","postal":"","country":""},"vesting_type":"non_borrower","signatory_capacities":[],"signing_status":"incomplete"},"signers":[{"email":"test@willing.com","first_name":"CI","last_name":"Test","transaction_access_link":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbe8b2e30d-d9c5-4094-8dfd-a7d2791cfb38\u0026code=EVVNJLHGVCPCHJDH\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=EVVNJLHGVCPCHJDH\u0026target=BUNDLE\u0026transaction_id=otngzeo44\u0026user_id=usnm9kjp6","sdk_token":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbe8b2e30d-d9c5-4094-8dfd-a7d2791cfb38\u0026code=EVVNJLHGVCPCHJDH\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=EVVNJLHGVCPCHJDH\u0026target=BUNDLE\u0026transaction_id=otngzeo44\u0026user_id=usnm9kjp6","link_expired":false,"address":{"line1":"","line2":"","city":"","state":"","postal":"","country":""},"vesting_type":"non_borrower","signatory_capacities":[],"signing_status":"incomplete"}],"status":"sent","transaction_name":"Untitled
+      string: '{"id":"ot_ngzexek","attachments":[],"cost":0,"date_created":"2024-10-04T22:27:21.152068Z","date_updated":"2024-10-04T22:27:21.497052Z","default_text_tag_syntax":"STANDARD","detailed_status":"sent_to_signer","documents":[{"id":"do_250ae0e7-effd-43b7-8950-f780170ba1d3","allowed_actions":["CUSTOMER_CAN_ANNOTATE","NOTARIZATION_REQUIRED"],"bundle_position":0,"completion_state":"incomplete","date_created":"2024-10-04T22:27:21.332760Z","date_updated":"2024-10-04T22:27:21.743889Z","document_name":"20241004-6289-c0lk1.pdf","esign_required":false,"identity_confirmation_required":false,"notarization_required":true,"processing_state":"pending","requirement":"notarization","signing_designation_groups":[],"signing_designations":[],"vaulted":false}],"notarization_records":[],"organization_id":"or_d3gg34g","payer":"sender","redirect":{},"require_secondary_photo_id":false,"sender_name":"MetLife
+        Legal Plans","signer_info":{"email":"test@willing.com","first_name":"CI","last_name":"Test","transaction_access_link":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbef52f65a-a21a-4ae0-b670-d78a37d8323d\u0026code=GVDPKTKDHMWDYLWI\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=GVDPKTKDHMWDYLWI\u0026target=BUNDLE\u0026transaction_id=otngzexek\u0026user_id=usnm9kjp6","sdk_token":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbef52f65a-a21a-4ae0-b670-d78a37d8323d\u0026code=GVDPKTKDHMWDYLWI\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=GVDPKTKDHMWDYLWI\u0026target=BUNDLE\u0026transaction_id=otngzexek\u0026user_id=usnm9kjp6","link_expired":false,"address":{"line1":"","line2":"","city":"","state":"","postal":"","country":""},"vesting_type":"non_borrower","signatory_capacities":[],"signing_status":"incomplete"},"signers":[{"email":"test@willing.com","first_name":"CI","last_name":"Test","transaction_access_link":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbef52f65a-a21a-4ae0-b670-d78a37d8323d\u0026code=GVDPKTKDHMWDYLWI\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=GVDPKTKDHMWDYLWI\u0026target=BUNDLE\u0026transaction_id=otngzexek\u0026user_id=usnm9kjp6","sdk_token":"https://app.fairfax.proof.com/activate-transaction?bundle_id=dbef52f65a-a21a-4ae0-b670-d78a37d8323d\u0026code=GVDPKTKDHMWDYLWI\u0026completion_requirements%5B%5D=NOTARIZATION\u0026document_count=1\u0026email=test%40willing.com\u0026is_mortgage=false\u0026organization_name=MetLife+Legal+Plans\u0026requires_nsa_meeting=true\u0026s_key=GVDPKTKDHMWDYLWI\u0026target=BUNDLE\u0026transaction_id=otngzexek\u0026user_id=usnm9kjp6","link_expired":false,"address":{"line1":"","line2":"","city":"","state":"","postal":"","country":""},"vesting_type":"non_borrower","signatory_capacities":[],"signing_status":"incomplete"}],"status":"sent","transaction_name":"Untitled
         Transaction"}'
     headers:
       Connection:
@@ -84,7 +84,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 02 Oct 2024 20:47:21 GMT
+      - Fri, 04 Oct 2024 22:27:21 GMT
       Transfer-Encoding:
       - chunked
       cache-control:
@@ -100,7 +100,7 @@ interactions:
       vary:
       - Accept, Accept-Encoding, Origin
       x-amz-trace-id:
-      - 40a82d5f-bef8-49ac-8694-3fcc66619e7d
+      - b6e760f1-b901-4945-87eb-6edce08cca92
       x-content-type-options:
       - nosniff
       x-frame-options:
@@ -108,7 +108,7 @@ interactions:
       x-permitted-cross-domain-policies:
       - none
       x-runtime:
-      - '0.082602'
+      - '0.051454'
       x-xss-protection:
       - '0'
     status:
@@ -128,7 +128,7 @@ interactions:
       User-Agent:
       - python-requests/2.32.3
     method: GET
-    uri: https://api.fairfax.proof.com/v1/transactions/ot_ngzeo44/documents/do_f0c41501-4c13-4ac0-b72e-0268b50306fb
+    uri: https://api.fairfax.proof.com/v1/transactions/ot_ngzexek/documents/do_250ae0e7-effd-43b7-8950-f780170ba1d3
   response:
     body:
       string: '{"errors":["Document processing: pending"]}'
@@ -138,7 +138,7 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 02 Oct 2024 20:47:21 GMT
+      - Fri, 04 Oct 2024 22:27:22 GMT
       Transfer-Encoding:
       - chunked
       cache-control:
@@ -154,7 +154,7 @@ interactions:
       vary:
       - Accept, Accept-Encoding, Origin
       x-amz-trace-id:
-      - 1bc4a470-c995-40e6-b8c5-cc9418592073
+      - 3b94e8fe-5191-4236-ada8-7d6534c71d40
       x-content-type-options:
       - nosniff
       x-frame-options:
@@ -162,7 +162,7 @@ interactions:
       x-permitted-cross-domain-policies:
       - none
       x-runtime:
-      - '0.030081'
+      - '0.042022'
       x-xss-protection:
       - '0'
     status:
@@ -182,17 +182,17 @@ interactions:
       User-Agent:
       - python-requests/2.32.3
     method: GET
-    uri: https://api.fairfax.proof.com/v1/transactions/ot_ngzeo44/documents/do_f0c41501-4c13-4ac0-b72e-0268b50306fb
+    uri: https://api.fairfax.proof.com/v1/transactions/ot_ngzexek/documents/do_250ae0e7-effd-43b7-8950-f780170ba1d3
   response:
     body:
-      string: '{"id":"do_f0c41501-4c13-4ac0-b72e-0268b50306fb","allowed_actions":["CUSTOMER_CAN_ANNOTATE","NOTARIZATION_REQUIRED"],"bundle_position":0,"completion_state":"incomplete","date_created":"2024-10-02T20:47:20.958128Z","date_updated":"2024-10-02T20:47:22.092905Z","document_name":"20241002-30829-tx9gj.pdf","is_enote":false,"permissions":["CUSTOMER_CAN_ANNOTATE","NOTARIZATION_REQUIRED"],"processing_error":null,"processing_state":"done","rejection_reason":null,"rejection_anecdote":null,"requirement":"notarization","signed_url":null,"signing_designation_groups":[],"signing_designations":[],"signing_type":"NOTARIZATION","tracking_id":null,"final_document_url":null}'
+      string: '{"id":"do_250ae0e7-effd-43b7-8950-f780170ba1d3","allowed_actions":["CUSTOMER_CAN_ANNOTATE","NOTARIZATION_REQUIRED"],"bundle_position":0,"completion_state":"incomplete","date_created":"2024-10-04T22:27:21.332760Z","date_updated":"2024-10-04T22:27:22.218682Z","document_name":"20241004-6289-c0lk1.pdf","is_enote":false,"permissions":["CUSTOMER_CAN_ANNOTATE","NOTARIZATION_REQUIRED"],"processing_error":null,"processing_state":"done","rejection_reason":null,"rejection_anecdote":null,"requirement":"notarization","signed_url":null,"signing_designation_groups":[],"signing_designations":[],"signing_type":"NOTARIZATION","tracking_id":null,"final_document_url":null}'
     headers:
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 02 Oct 2024 20:47:22 GMT
+      - Fri, 04 Oct 2024 22:27:22 GMT
       Transfer-Encoding:
       - chunked
       cache-control:
@@ -208,7 +208,7 @@ interactions:
       vary:
       - Accept, Accept-Encoding, Origin
       x-amz-trace-id:
-      - 59c203ab-70a2-4423-bbfa-61f09781e251
+      - d7ae1bf9-f1ac-49c2-a731-9a6a3106564d
       x-content-type-options:
       - nosniff
       x-frame-options:
@@ -216,7 +216,7 @@ interactions:
       x-permitted-cross-domain-policies:
       - none
       x-runtime:
-      - '0.029370'
+      - '0.046550'
       x-xss-protection:
       - '0'
     status:
@@ -238,17 +238,17 @@ interactions:
       User-Agent:
       - python-requests/2.32.3
     method: DELETE
-    uri: https://api.fairfax.proof.com/v1/transactions/ot_ngzeo44
+    uri: https://api.fairfax.proof.com/v1/transactions/ot_ngzexek
   response:
     body:
-      string: '{"message":"Deleted Transaction ot_ngzeo44 successfully"}'
+      string: '{"message":"Deleted Transaction ot_ngzexek successfully"}'
     headers:
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 02 Oct 2024 20:47:22 GMT
+      - Fri, 04 Oct 2024 22:27:22 GMT
       Transfer-Encoding:
       - chunked
       cache-control:
@@ -264,7 +264,7 @@ interactions:
       vary:
       - Accept, Accept-Encoding, Origin
       x-amz-trace-id:
-      - bfacb6f6-9715-4768-8761-9e255d420b0b
+      - 72615287-ccdc-4428-ad3e-998bbb2e861c
       x-content-type-options:
       - nosniff
       x-frame-options:
@@ -272,7 +272,7 @@ interactions:
       x-permitted-cross-domain-policies:
       - none
       x-runtime:
-      - '0.074919'
+      - '0.073599'
       x-xss-protection:
       - '0'
     status:

@@ -1,0 +1,225 @@
+interactions:
+- request:
+    body: '{"url": "https://patterson.com/", "subscriptions": ["transaction.completed"],
+      "header": "X-Security-Key:mUOpMOJn"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '114'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: POST
+    uri: https://api.fairfax.proof.com/v2/webhooks/
+  response:
+    body:
+      string: '{"url":"https://patterson.com/","header":"X-Security-Key:mUOpMOJn","subscriptions":["transaction.completed"],"enabled":true,"id":"whdjzqagd"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Oct 2024 22:27:23 GMT
+      Transfer-Encoding:
+      - chunked
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      notarize-version:
+      - '2017-05-01'
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      vary:
+      - Accept, Accept-Encoding, Origin
+      x-amz-trace-id:
+      - a392f5ec-7e69-4eb4-8749-401110dcb130
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-permitted-cross-domain-policies:
+      - none
+      x-runtime:
+      - '0.028570'
+      x-xss-protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"url": "https://www.austin.net/"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '34'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: PUT
+    uri: https://api.fairfax.proof.com/v2/webhooks/whdjzqagd
+  response:
+    body:
+      string: '{"updated":true}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Oct 2024 22:27:23 GMT
+      Transfer-Encoding:
+      - chunked
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      notarize-version:
+      - '2017-05-01'
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      vary:
+      - Accept, Accept-Encoding, Origin
+      x-amz-trace-id:
+      - cfae9a81-38be-4c4e-9b96-4ba2c260a0b6
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-permitted-cross-domain-policies:
+      - none
+      x-runtime:
+      - '0.039072'
+      x-xss-protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.fairfax.proof.com/v2/webhooks/whdjzqagd
+  response:
+    body:
+      string: '{"url":"https://www.austin.net/","header":"X-Security-Key:mUOpMOJn","subscriptions":["transaction.completed"],"enabled":true,"id":"whdjzqagd"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Oct 2024 22:27:24 GMT
+      Transfer-Encoding:
+      - chunked
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      notarize-version:
+      - '2017-05-01'
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      vary:
+      - Accept, Accept-Encoding, Origin
+      x-amz-trace-id:
+      - 6464daca-4e95-4347-804f-5a3ecfe36fd5
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-permitted-cross-domain-policies:
+      - none
+      x-runtime:
+      - '0.032523'
+      x-xss-protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: DELETE
+    uri: https://api.fairfax.proof.com/v2/webhooks/whdjzqagd
+  response:
+    body:
+      string: '{"deleted":true}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 04 Oct 2024 22:27:24 GMT
+      Transfer-Encoding:
+      - chunked
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      notarize-version:
+      - '2017-05-01'
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      vary:
+      - Accept, Accept-Encoding, Origin
+      x-amz-trace-id:
+      - 35819d5e-6648-4c02-99f9-4d4e04c590ae
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-permitted-cross-domain-policies:
+      - none
+      x-runtime:
+      - '0.024685'
+      x-xss-protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1

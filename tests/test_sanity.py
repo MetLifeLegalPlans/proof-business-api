@@ -55,3 +55,14 @@ def test_resource_client_initializes_subresources(api_key) -> None:
     client = ProofClient(api_key)
     assert client.transactions.api_key == api_key
     assert client.documents.api_key == api_key
+
+
+def test_client_uses_api_version(api_key) -> None:
+    for version in ["v1", "v2"]:
+
+        class MyClient(Client):
+            resource = api_key
+            api_version = version
+
+        client = MyClient(api_key)
+        assert version in client.base_url

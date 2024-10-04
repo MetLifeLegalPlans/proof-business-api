@@ -1,17 +1,13 @@
 from typing import Dict, Any
 
 import pytest
-from pytest_mock import MockerFixture, MockType
-
 import requests
 
+from .types import spy
 from proof_business_api import ProofClient
 
-_api_key_var = "PROOF_API_KEY"
 pytestmark = [pytest.mark.vcr]
 
-_used_methods = ["get", "post", "put", "patch", "delete"]
-_spies: Dict[str, MockType] = {}
 _create_params: Dict[str, Any] = {
     "signer": {
         "email": "test@willing.com",
@@ -30,44 +26,31 @@ ICAvUm9vdCAxIDAgUgo+PgpzdGFydHhyZWYKNDkyCiUlRU9G",
 }
 
 
-@pytest.fixture(autouse=True)
-def lifecycle(mocker: MockerFixture):
-    for method in _used_methods:
-        _spies[method] = mocker.spy(requests, method)
-
-    yield
-
-
 @pytest.fixture
 def client(api_key: str) -> ProofClient:
     return ProofClient(api_key, fairfax=True)
 
 
-def _reset_spies() -> None:
-    for spy in _spies.values():
-        spy.reset_mock()
-
-
-def test_list(client: ProofClient):
+def test_list(client: ProofClient, spies: spy):
     response = client.transactions.all()
 
-    get_spy = _spies["get"]
-    get_spy.assert_called_once()
+    getspy = spies["get"]
+    getspy.assert_called_once()
 
     assert all([key in response for key in ["total_count", "count", "data"]])
 
 
-def test_lifecycle(client: ProofClient):
+def test_lifecycle(client: ProofClient, spies: spy):
     # Create a new transaction
     response = client.transactions.create(**_create_params)
-    post_spy = _spies["post"]
+    post_spy = spies["post"]
     post_spy.assert_called_once()
 
     # Fetch it back to confirm it was received
     response = client.transactions.retrieve(response["id"])
-    get_spy = _spies["get"]
+    get_spy = spies["get"]
     get_spy.assert_called_once()
-    _reset_spies()
+    get_spy.reset_mock()
 
     transaction_id = response["id"]
     document_id = response["documents"][0]["id"]
@@ -82,11 +65,11 @@ def test_lifecycle(client: ProofClient):
             get_spy.assert_called_once()
             break
         except requests.HTTPError:
-            _reset_spies()
+            get_spy.reset_mock()
     else:
         raise AssertionError("Unable to fetch document")
 
     # Delete the transaction to clean up after ourselves
     response = client.transactions.delete(transaction_id)
-    delete_spy = _spies["delete"]
-    delete_spy.assert_called_once()
+    deletespy = spies["delete"]
+    deletespy.assert_called_once()
