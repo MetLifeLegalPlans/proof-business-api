@@ -164,7 +164,7 @@ class TransactionsClient(Client):
         """
         Returns eligible notaries for given transaction ID.
 
-        :param id: (``string``) -- Transaction ID for which to send the SMS.
+        :param id: (``string``) -- Transaction ID for which to retrieve the notaries.
         :return:
 
         `Proof Docs <https://dev.proof.com/reference/getalleligiblenotaries>`_
