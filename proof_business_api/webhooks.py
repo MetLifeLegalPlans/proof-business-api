@@ -92,7 +92,7 @@ class WebhooksClient(Client):
 
     def subscriptions(self) -> JsonObj:
         """
-        Returns all possible subscription events.
+        Returns all active subscription events.
 
         :return: ``JsonObj``
         """
