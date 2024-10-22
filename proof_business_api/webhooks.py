@@ -1,5 +1,7 @@
 from .client import Client
 from .types import JsonObj
+import hmac
+from hashlib import sha256
 
 
 class WebhooksClient(Client):
@@ -26,3 +28,7 @@ class WebhooksClient(Client):
 
     def subscriptions(self) -> JsonObj:
         return self._get("")
+
+    def validate_hmac(self, body: bytes, x_notarize_signature: str):
+        hmac_signature = hmac.new(self.api_key.encode(), body, sha256).hexdigest()
+        return hmac_signature == x_notarize_signature
