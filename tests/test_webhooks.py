@@ -1,8 +1,9 @@
 from faker import Faker
-import pytest
+import pytest, os, hmac
 
 from .types import spy
 from proof_business_api import ProofClient
+from hashlib import sha256
 
 pytestmark = [pytest.mark.vcr]
 fake = Faker()
@@ -17,6 +18,21 @@ def client(api_key: str) -> ProofClient:
 @pytest.fixture
 def custom_header() -> str:
     return "X-Security-Key:{}".format("".join(fake.random_letters(length=8)))
+
+
+@pytest.fixture
+def proof_api_key() -> str:
+    return os.environ.get("PROOF_API_KEY")
+
+
+def test_validation(client: ProofClient, proof_api_key: str):
+    api_key = proof_api_key
+    body_text = fake.text()
+    body = body_text.encode()
+    generated_hmac = hmac.new(api_key.encode(), body, sha256).hexdigest()
+    valid = client.webhooks.validate_hmac(body, generated_hmac)
+    assert valid == True
+
 
 
 def test_list(client: ProofClient, spies: spy):

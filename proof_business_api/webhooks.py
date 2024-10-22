@@ -29,6 +29,6 @@ class WebhooksClient(Client):
     def subscriptions(self) -> JsonObj:
         return self._get("")
 
-    def validate_hmac(self, body: bytes, x_notarize_signature: str):
+    def validate_hmac(self, body: bytes, signature: str):
         hmac_signature = hmac.new(self.api_key.encode(), body, sha256).hexdigest()
-        return hmac_signature == x_notarize_signature
+        return hmac_signature == signature
