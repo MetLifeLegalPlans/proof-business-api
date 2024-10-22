@@ -30,5 +30,14 @@ class WebhooksClient(Client):
         return self._get("")
 
     def validate_hmac(self, body: bytes, signature: str):
+        """
+        Validates the request signature against the hmac encoded API key.
+
+        :param body: (``bytes``) -- Request body formatted as ``bytes``.
+        :param signature: (``string``) -- Request signature.
+        :return: (``boolean``) -- Returns whether the signature matches the encoding from our API key.
+
+        `Proof Recipe <https://dev.proof.com/recipes/validate-webhooks-and-fetch-completed-documents>`_
+        """
         hmac_signature = hmac.new(self.api_key.encode(), body, sha256).hexdigest()
         return hmac_signature == signature
