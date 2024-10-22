@@ -95,5 +95,7 @@ class WebhooksClient(Client):
         Returns all active subscription events.
 
         :return: ``JsonObj``
+
+        `Proof Docs <https://dev.proof.com/reference/getmortgagewebhooksubscriptionsv2>`_
         """
         return self._get("subscriptions")
