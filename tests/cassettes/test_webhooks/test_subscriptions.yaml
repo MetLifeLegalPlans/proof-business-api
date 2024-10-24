@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.fairfax.proof.com/v2/webhooks/subscriptions
+  response:
+    body:
+      string: '{"transaction":["transaction.*","transaction.created","transaction.sent","transaction.updated","transaction.received","transaction.completed","transaction.completed_with_rejections","transaction.partially_completed","transaction.deleted","transaction.recalled","transaction.expired","transaction.released","transaction.reviewed","transaction.sent_to_closing_ops","transaction.sent_to_signer","transaction.sent_to_title_agency","transaction.document.upload","transaction.document.processed","transaction.meeting.created","transaction.meeting.failed","transaction.meeting.requested","transaction.meeting.video.processed","transaction.notary.assigned","transaction.signer.kba_failed","transaction.signer.kba_passed","transaction.signer.high_risk_detected","transaction.signer.medium_risk_detected","transaction.transaction.automated_identity_verification_by_idv_service_failed","transaction.transaction.automated_identity_verification_by_idv_service_passed","transaction.underwriter.not_available"],"notary":["notary.*","notary.created","notary.needs_review","notary.compliant","notary.non_compliant","notary.signer_ready"]}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 11 Oct 2024 21:46:18 GMT
+      Transfer-Encoding:
+      - chunked
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      notarize-version:
+      - '2017-05-01'
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      vary:
+      - Accept, Accept-Encoding, Origin
+      x-amz-trace-id:
+      - bd0f26f4-9b8b-478f-806d-ddc5b7d84207
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-permitted-cross-domain-policies:
+      - none
+      x-runtime:
+      - '0.022374'
+      x-xss-protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1

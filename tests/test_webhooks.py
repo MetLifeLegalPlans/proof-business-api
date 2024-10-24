@@ -43,6 +43,14 @@ def test_list(client: ProofClient, spies: spy):
 
     assert response is not None
 
+def test_subscriptions(client: ProofClient, spies: spy):
+    response = client.webhooks.subscriptions()
+
+    get_spy = spies["get"]
+    get_spy.assert_called_once()
+
+    assert response["transaction"]
+
 
 def test_lifecycle(client: ProofClient, spies: spy, custom_header: str):
     webhook = client.webhooks.create(
