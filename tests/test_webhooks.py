@@ -1,5 +1,6 @@
 from faker import Faker
-import pytest, hmac
+import pytest
+import hmac
 
 from .types import spy
 from proof_business_api import ProofClient
@@ -25,8 +26,7 @@ def test_validation(client: ProofClient, api_key: str):
     body = body_text.encode()
     generated_hmac = hmac.new(api_key.encode(), body, sha256).hexdigest()
     valid = client.webhooks.validate_hmac(body, generated_hmac)
-    assert valid == True
-
+    assert valid
 
 
 def test_list(client: ProofClient, spies: spy):
@@ -36,6 +36,7 @@ def test_list(client: ProofClient, spies: spy):
     get_spy.assert_called_once()
 
     assert response is not None
+
 
 def test_subscriptions(client: ProofClient, spies: spy):
     response = client.webhooks.subscriptions()
