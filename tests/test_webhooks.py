@@ -1,5 +1,5 @@
 from faker import Faker
-import pytest, os, hmac
+import pytest, hmac
 
 from .types import spy
 from proof_business_api import ProofClient
@@ -20,13 +20,7 @@ def custom_header() -> str:
     return "X-Security-Key:{}".format("".join(fake.random_letters(length=8)))
 
 
-@pytest.fixture
-def proof_api_key() -> str:
-    return os.environ.get("PROOF_API_KEY")
-
-
-def test_validation(client: ProofClient, proof_api_key: str):
-    api_key = proof_api_key
+def test_validation(client: ProofClient, api_key: str):
     body_text = fake.text()
     body = body_text.encode()
     generated_hmac = hmac.new(api_key.encode(), body, sha256).hexdigest()

@@ -106,9 +106,9 @@ class WebhooksClient(Client):
         """
         Validates the request signature against the hmac encoded API key.
 
-        :param body: (``bytes``) -- Request body formatted as ``bytes``.
-        :param signature: (``string``) -- Request signature.
-        :return: (``boolean``) -- Returns whether the signature matches the encoding from our API key.
+        :param body: (``bytes``) -- Request body as ``bytes``.
+        :param signature: (``string``) -- Request signature from the ``x-notarize-signature`` header.
+        :return: (``boolean``) -- Returns whether the computed signature matches the expected one.
 
         `Proof Recipe <https://dev.proof.com/recipes/validate-webhooks-and-fetch-completed-documents>`_
         """
