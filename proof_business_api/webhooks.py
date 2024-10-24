@@ -1,5 +1,7 @@
 from .client import Client
 from .types import JsonObj
+import hmac
+from hashlib import sha256
 
 
 class WebhooksClient(Client):
@@ -99,3 +101,16 @@ class WebhooksClient(Client):
         `Proof Docs <https://dev.proof.com/reference/getmortgagewebhooksubscriptionsv2>`_
         """
         return self._get("subscriptions")
+
+    def validate_hmac(self, body: bytes, signature: str):
+        """
+        Validates the request signature against the hmac encoded API key.
+
+        :param body: (``bytes``) -- Request body as ``bytes``.
+        :param signature: (``string``) -- Request signature from the ``x-notarize-signature`` header.
+        :return: (``boolean``) -- Returns whether the computed signature matches the expected one.
+
+        `Proof Recipe <https://dev.proof.com/recipes/validate-webhooks-and-fetch-completed-documents>`_
+        """
+        hmac_signature = hmac.new(self.api_key.encode(), body, sha256).hexdigest()
+        return hmac_signature == signature
